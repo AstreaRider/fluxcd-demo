@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+    spec:
+      replicas: 2
+      containers:
+      - image: 10969ra/notes-api-demo:dev-latest
+        name: notes-api-demo
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - secretRef:
+            name: notes-api-demo-dev-secret
