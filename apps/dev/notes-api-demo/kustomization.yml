@@ -9,6 +9,8 @@ labels:
     includeTemplates: true 
 resources:
 - ../../base
+- namespace.yml
+- secret.yml
 
 patches:
 - path: deployment.yml
