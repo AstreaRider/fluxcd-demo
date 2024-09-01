@@ -3,8 +3,9 @@ kind: Deployment
 metadata:
   name: deployment
 spec:
+  replicas: 2
+  template:
     spec:
-      replicas: 2
       containers:
       - image: 10969ra/notes-api-demo:dev-latest
         name: notes-api-demo
