@@ -15,6 +15,7 @@ images:
 resources:
 - ../../base
 - secret.yml
+- namespace.yml
 
 patches:
 - path: deployment.yml
