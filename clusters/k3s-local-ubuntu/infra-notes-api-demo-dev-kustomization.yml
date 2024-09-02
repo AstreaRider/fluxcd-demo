@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps-notes-api-demo-dev-kustomization
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./infrastructure/apps/dev/notes-api-demo
+  prune: true
+  retryInterval: 2m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 3m0s
+  wait: true
