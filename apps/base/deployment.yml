@@ -14,7 +14,7 @@ spec:
         app: label-value
     spec:
       containers:
-      - image: nginx # replace with desired value
-        name: image-name
+      - image: app-placeholder:latest
+        name: app
         resources: {}
 status: {}

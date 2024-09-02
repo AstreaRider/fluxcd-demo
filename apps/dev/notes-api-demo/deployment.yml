@@ -7,8 +7,6 @@ spec:
   template:
     spec:
       containers:
-      - image: 10969ra/notes-api-demo:dev-latest
-        name: notes-api-demo
         ports:
         - containerPort: 3000
         envFrom:
