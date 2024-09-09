@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infra-crds-kube-prometheus-stack-kustomization
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./infrastructures/crds/kube-prometheus-stack
+  prune: true
+  retryInterval: 2m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 3m0s
+  wait: true
